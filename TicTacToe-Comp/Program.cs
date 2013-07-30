@@ -50,7 +50,7 @@ namespace TicTacToe_Comp
             var playerOneAgent = kernel.Get<IPlayerAgent>("playerOne");
             var playerTwoAgent = kernel.Get<IPlayerAgent>("playerTwo");
 
-            game.GameLoop().Subscribe((x) => { }, () =>
+            game.GameLoop().Subscribe((x) => { Console.WriteLine(x); }, () =>
                 {
                     if (game.GameStatus == GameStatus.PlayerOneWins)
                     {
